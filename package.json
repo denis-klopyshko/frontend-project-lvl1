@@ -1,0 +1,23 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "Hexlet Brain Games Project",
+  "type": "module",
+  "bin": {
+    "hexlet": "bin/brain-games.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denis-klopyshko/frontend-project-lvl1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denis-klopyshko/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/denis-klopyshko/frontend-project-lvl1#readme"
+}
