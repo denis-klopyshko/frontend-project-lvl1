@@ -4,7 +4,7 @@
   "description": "Hexlet Brain Games Project",
   "type": "module",
   "bin": {
-    "hexlet": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js"
   },
   "main": "index.js",
   "scripts": {
