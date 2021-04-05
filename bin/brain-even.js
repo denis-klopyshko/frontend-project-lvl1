@@ -1,44 +1,9 @@
-import readlineSync from "readline-sync";
+#!/usr/bin/env node
+import initEvenGame from '../games/even.js';
+import askName from './cli.js';
 
-const SUCCESS_ATTEMPTS = 3;
-let currentAttempt = 1;
+console.log('Welcome to the Brain Games!');
 
-// Initialization
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const userName = askName();
 
-const generateNumber = (max) => Math.floor(Math.random() * Math.floor(max));
-const expectedNumber = generateNumber(100);
-
-console.log(`Question: ${expectedNumber}`);
-
-// Function to get answer
-const getAnswer = () => readlineSync.question("Your answer: ");
-
-// Check if number isEven
-const isEven = (num) => (num % 2 === 0 ? true : false);
-
-const checkResult = () => {
-  let answer;
-  if (currentAttempt === SUCCESS_ATTEMPTS) {
-    console.log("Congratulations, Bill!");
-    return;
-  }
-
-  if (currentAttempt <= SUCCESS_ATTEMPTS) {
-    answer = getAnswer();
-    if (
-      (answer === "yes" && isEven(expectedNumber)) ||
-      (answer === "no" && !isEven(expectedNumber))
-    ) {
-      console.log("Correct!");
-      currentAttempt += currentAttempt;
-      checkResult();
-      return;
-    }
-
-    console.log(
-      "yes' is wrong answer ;(. Correct answer was 'no'./nLet's try again, Bill!"
-    );
-    checkResult();
-  }
-};
+initEvenGame(userName);
