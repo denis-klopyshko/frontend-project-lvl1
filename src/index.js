@@ -4,7 +4,7 @@ import { car, cdr } from '@hexlet/pairs';
 const NUMBER_OF_ROUNDS = 3;
 const WELCOME_MESSAGE = 'Welcome to the Brain Games!';
 
-export default (description, initGameFn) => {
+export default (description, fn) => {
   console.log(WELCOME_MESSAGE);
   console.log(`${description}\n`);
 
@@ -12,7 +12,7 @@ export default (description, initGameFn) => {
   console.log(`Hello, ${name}!\n`);
 
   for (let i = 0; i < NUMBER_OF_ROUNDS; i += 1) {
-    const gameData = initGameFn();
+    const gameData = fn();
     const correctAnswer = cdr(gameData);
     const question = car(gameData);
 
