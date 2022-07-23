@@ -20,7 +20,7 @@ export default (description, fn) => {
     const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
-      correctAnswers+=1;
+      correctAnswers += 1;
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
